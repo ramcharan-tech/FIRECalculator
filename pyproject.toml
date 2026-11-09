@@ -1,0 +1,18 @@
+[project]
+name = "firecalculator"
+version = "0.1.0"
+description = "A transparent, configurable FIRE planning calculator"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = ["streamlit>=1.40,<2", "plotly>=5.24,<7", "python-dotenv>=1,<2"]
+
+[project.optional-dependencies]
+assistant = [
+  "langgraph>=0.2,<2",
+  "langchain-google-genai>=2,<5",
+  "langchain-openai>=0.2,<2",
+  "langchain-core>=0.3,<2",
+]
+
+[tool.uv]
+package = false
